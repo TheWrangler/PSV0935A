@@ -1,0 +1,49 @@
+---------------------------------------
+Resource Usage Report for top 
+
+Mapping to part: xc6slx25csg324-2
+Cell usage:
+DSP48A1         4 uses
+FD              374 uses
+FDE             152 uses
+FDR             110 uses
+FDRE            394 uses
+GND             14 uses
+MUXCY           16 uses
+MUXCY_L         278 uses
+VCC             14 uses
+XORCY           255 uses
+LUT1            186 uses
+LUT2            112 uses
+LUT3            117 uses
+LUT4            150 uses
+LUT5            295 uses
+LUT6            283 uses
+LUT6_2            1 use
+
+I/O ports: 129
+I/O primitives: 129
+IBUF           4 uses
+IBUFG          1 use
+IOBUF          32 uses
+OBUF           92 uses
+
+BUFG           1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   1030 (2%)
+
+DSP48s: 4 of 38 (10%)
+
+Global Clock Buffers: 1 of 16 (6%)
+
+
+Mapping Summary:
+Total  LUTs: 1023 (5%)
+
+Distribution of All Consumed LUTs = LUT1 + LUT2 + LUT3 + LUT4 + LUT5 + LUT6 + LUT6_2- HLUTNM/2 
+Distribution of All Consumed Luts 1023 = 186 + 112 + 117 + 150 + 295 + 283 + 1- 242/2 
+
+
+ Number of unique control sets:              39
+

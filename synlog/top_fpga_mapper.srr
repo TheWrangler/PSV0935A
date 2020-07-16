@@ -1,0 +1,651 @@
+Synopsys Xilinx Technology Mapper, Version maprc, Build 1495R, Built Mar  1 2013 13:42:34
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version H-2013.03
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+Reading Xilinx I/O pad type table from file <D:\Synopsys\fpga_H201303\lib\xilinx\x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <D:\Synopsys\fpga_H201303\lib\xilinx\gttype.txt> 
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 139MB)
+
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[15],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[18],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[28],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_step_reg[13],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[15],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[16],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[1],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[11],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[14],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[17],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[19],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_rate_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.positive_rate_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_1.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.upper_limit_reg[0],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[2],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[11],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[17],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[19],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[20],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_1.lower_limit_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_1.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[28],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_step_reg[13],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[4]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[16],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[14],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[25],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_rate_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.positive_rate_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_2.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.upper_limit_reg[0],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[18],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[20],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_2.lower_limit_reg[25],  because it is equivalent to instance ad9914_ctrl_inst_2.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[15],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[18],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[28],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_step_reg[13],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[14],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[15],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[16],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[11],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[27],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_rate_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.positive_rate_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_3.upper_limit_reg[0]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.upper_limit_reg[0],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[11],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[20],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_3.lower_limit_reg[27],  because it is equivalent to instance ad9914_ctrl_inst_3.lower_limit_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[20],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[12],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_step_reg[13],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[6],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[21],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[14],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[16],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[25],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_rate_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.positive_rate_reg[7],  because it is equivalent to instance ad9914_ctrl_inst_4.upper_limit_reg[9]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.upper_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[4],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[18],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[25],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[28],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance ad9914_ctrl_inst_4.lower_limit_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_4.lower_limit_reg[1]
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "0000" on instance ad9914_update_reg[3:0] 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+
+Encoding state machine fsm_state[1:0] (view:work.top(verilog))
+original code -> new code
+   00000000 -> 0
+   00000001 -> 1
+Encoding state machine initsweep_osk_trig_sta[4:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog))
+original code -> new code
+   0000 -> 000
+   0001 -> 001
+   0010 -> 010
+   0011 -> 011
+   0100 -> 100
+Encoding state machine fsm_state_cur[18:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog))
+original code -> new code
+   00000000 -> 0000000000000000001
+   00000001 -> 0000000000000000010
+   00000011 -> 0000000000000000100
+   00000100 -> 0000000000000001000
+   00000101 -> 0000000000000010000
+   00000110 -> 0000000000000100000
+   00000111 -> 0000000000001000000
+   00001000 -> 0000000000010000000
+   00001001 -> 0000000000100000000
+   00001010 -> 0000000001000000000
+   00001011 -> 0000000010000000000
+   00001100 -> 0000000100000000000
+   00001101 -> 0000001000000000000
+   00001110 -> 0000010000000000000
+   00001111 -> 0000100000000000000
+   00010000 -> 0001000000000000000
+   00010001 -> 0010000000000000000
+   00010010 -> 0100000000000000000
+   00010011 -> 1000000000000000000
+@N:"f:\psv0935a\ad9914_ctrl.v":359:1:359:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) inst initsweep_osk_trig_delay_count[7:0]
+@N:"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) inst delay_count[31:0]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[31] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[27],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[25]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[28],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[10]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[11]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[11]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[1],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[11]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[16]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[18]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[15]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[15]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_1.reg_wvar_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_1.reg_wvar_reg[21]
+Encoding state machine fsm_state_cur[9:0] (view:work.ad9914_reg_wr(verilog))
+original code -> new code
+   00000000 -> 0000000001
+   00000001 -> 0000000010
+   00000010 -> 0000000100
+   00000011 -> 0000001000
+   00000100 -> 0000010000
+   00000101 -> 0000100000
+   00000110 -> 0001000000
+   00000111 -> 0010000000
+   00001000 -> 0100000000
+   00001001 -> 1000000000
+@N:"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Found counter in view:work.ad9914_reg_wr(verilog) inst delay_count[15:0]
+@N:"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Found counter in view:work.ad9914_reg_wr(verilog) inst reg_index[7:0]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_byte_num_reg[3],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_byte_num_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_byte_num_reg[1],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_byte_num_reg[0]
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":219:24:219:58|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_0_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":220:28:220:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_1_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":221:28:221:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_2_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":222:28:222:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_3_'
+Encoding state machine fsm_state_cur[8:0] (view:work.parallel_wr(verilog))
+original code -> new code
+   00000000 -> 000000001
+   00000001 -> 000000010
+   00000010 -> 000000100
+   00000011 -> 000001000
+   00000100 -> 000010000
+   00000101 -> 000100000
+   00000110 -> 001000000
+   00000111 -> 010000000
+   00001000 -> 100000000
+@N:"f:\psv0935a\parallel_wr.v":80:4:80:9|Found counter in view:work.parallel_wr(verilog) inst delay_count[15:0]
+Encoding state machine initsweep_osk_trig_sta[4:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog))
+original code -> new code
+   0000 -> 000
+   0001 -> 001
+   0010 -> 010
+   0011 -> 011
+   0100 -> 100
+Encoding state machine fsm_state_cur[18:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog))
+original code -> new code
+   00000000 -> 0000000000000000001
+   00000001 -> 0000000000000000010
+   00000011 -> 0000000000000000100
+   00000100 -> 0000000000000001000
+   00000101 -> 0000000000000010000
+   00000110 -> 0000000000000100000
+   00000111 -> 0000000000001000000
+   00001000 -> 0000000000010000000
+   00001001 -> 0000000000100000000
+   00001010 -> 0000000001000000000
+   00001011 -> 0000000010000000000
+   00001100 -> 0000000100000000000
+   00001101 -> 0000001000000000000
+   00001110 -> 0000010000000000000
+   00001111 -> 0000100000000000000
+   00010000 -> 0001000000000000000
+   00010001 -> 0010000000000000000
+   00010010 -> 0100000000000000000
+   00010011 -> 1000000000000000000
+@N:"f:\psv0935a\ad9914_ctrl.v":359:1:359:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) inst initsweep_osk_trig_delay_count[7:0]
+@N:"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) inst delay_count[31:0]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[31],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[29]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[11]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[1],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[11]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[11] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[27],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[17]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[30],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[15],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[5]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[2]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[22]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[16]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_2.reg_wvar_reg[20],  because it is equivalent to instance ad9914_ctrl_inst_2.reg_wvar_reg[18]
+Encoding state machine initsweep_osk_trig_sta[4:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog))
+original code -> new code
+   0000 -> 000
+   0001 -> 001
+   0010 -> 010
+   0011 -> 011
+   0100 -> 100
+Encoding state machine fsm_state_cur[18:0] (view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog))
+original code -> new code
+   00000000 -> 0000000000000000001
+   00000001 -> 0000000000000000010
+   00000011 -> 0000000000000000100
+   00000100 -> 0000000000000001000
+   00000101 -> 0000000000000010000
+   00000110 -> 0000000000000100000
+   00000111 -> 0000000000001000000
+   00001000 -> 0000000000010000000
+   00001001 -> 0000000000100000000
+   00001010 -> 0000000001000000000
+   00001011 -> 0000000010000000000
+   00001100 -> 0000000100000000000
+   00001101 -> 0000001000000000000
+   00001110 -> 0000010000000000000
+   00001111 -> 0000100000000000000
+   00010000 -> 0001000000000000000
+   00010001 -> 0010000000000000000
+   00010010 -> 0100000000000000000
+   00010011 -> 1000000000000000000
+@N:"f:\psv0935a\ad9914_ctrl.v":359:1:359:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) inst initsweep_osk_trig_delay_count[7:0]
+@N:"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Found counter in view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) inst delay_count[31:0]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[31],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[29]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[29],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[1]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[1] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[25],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[17]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[11]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[22],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[16]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[18]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[15]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_3.reg_wvar_reg[10],  because it is equivalent to instance ad9914_ctrl_inst_3.reg_wvar_reg[2]
+Encoding state machine initsweep_osk_trig_sta[4:0] (view:work.ad9914_ctrl_8s(verilog))
+original code -> new code
+   0000 -> 000
+   0001 -> 001
+   0010 -> 010
+   0011 -> 011
+   0100 -> 100
+Encoding state machine fsm_state_cur[18:0] (view:work.ad9914_ctrl_8s(verilog))
+original code -> new code
+   00000000 -> 0000000000000000001
+   00000001 -> 0000000000000000010
+   00000011 -> 0000000000000000100
+   00000100 -> 0000000000000001000
+   00000101 -> 0000000000000010000
+   00000110 -> 0000000000000100000
+   00000111 -> 0000000000001000000
+   00001000 -> 0000000000010000000
+   00001001 -> 0000000000100000000
+   00001010 -> 0000000001000000000
+   00001011 -> 0000000010000000000
+   00001100 -> 0000000100000000000
+   00001101 -> 0000001000000000000
+   00001110 -> 0000010000000000000
+   00001111 -> 0000100000000000000
+   00010000 -> 0001000000000000000
+   00010001 -> 0010000000000000000
+   00010010 -> 0100000000000000000
+   00010011 -> 1000000000000000000
+@N:"f:\psv0935a\ad9914_ctrl.v":359:1:359:6|Found counter in view:work.ad9914_ctrl_8s(verilog) inst initsweep_osk_trig_delay_count[7:0]
+@N:"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Found counter in view:work.ad9914_ctrl_8s(verilog) inst delay_count[31:0]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[31],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[11]
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[11] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[5],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[30]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[9],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[29]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[27],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[17]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[23],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[21]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[8],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[6]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[26],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[20]
+@W: BN132 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing instance ad9914_ctrl_inst_4.reg_wvar_reg[24],  because it is equivalent to instance ad9914_ctrl_inst_4.reg_wvar_reg[22]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_1_[3],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_3_[7],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_3_[5],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[6],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_1_[7]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_1_[7],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_0_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[5],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_1_[1],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_1_[3],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[4],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_1_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_2_[7],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_2_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_2_[6],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_2_[0]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[2],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_2_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[3],  because it is equivalent to instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_3_[7],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_3_[5],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[7],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_1_[3]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_1_[0],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_0_[6]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[6],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_0_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[5],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_1_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_2_[7],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_2_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[0],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_2_[6]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[2],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_2_[4]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_3_[3],  because it is equivalent to instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_2_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_1_[7],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_1_[3],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_1_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_1_[2],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_2_[6],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_2_[0]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_3_[2],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_2_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_3_[1],  because it is equivalent to instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_2_[1]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_3_[6],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_1_[7]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_1_[7],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[5]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_1_[2],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_3_[0],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[0]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[6],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[0]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[4],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[2]
+@W: BN132 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_3_[3],  because it is equivalent to instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_2_[1]
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[7] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[1] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[1] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_1_[3] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 167MB peak: 167MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 158MB peak: 167MB)
+
+
+Clock Buffers:
+  Inserting Clock buffer for port clk,
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 155MB peak: 167MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 167MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 167MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 155MB peak: 167MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 167MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 167MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+------------------------------------------------------------
+
+@N: FX103 :"f:\psv0935a\pwr_rst.v":18:1:18:6|Instance "pwr_rst_inst.rst" with "414" loads has been replicated "4" time(s) due to a soft fanout limit of "100" 
+Net buffering Report for view:work.top(verilog):
+Added 0 Buffers
+Added 4 Registers via replication
+Added 4 LUTs via replication
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 167MB)
+
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+@N: FX623 |Packing into LUT62
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 157MB peak: 167MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 1034 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+============================== Non-Gated/Non-Generated Clocks ==============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance     
+--------------------------------------------------------------------------------------------
+@K:CKID0001       clk                 port                   1034       ad9914_update_reg[0]
+============================================================================================
+===== Gated/Generated Clocks =====
+************** None **************
+----------------------------------
+==================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+Writing Analyst data base F:\PSV0935A\top.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 154MB peak: 167MB)
+
+Writing EDIF Netlist and constraint files
+H-2013.03
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 156MB peak: 167MB)
+
+@W: MT420 |Found inferred clock top|clk with period 1000.00ns. Please declare a user-defined clock on object "p:clk"
+
+@N: MT535 |Writing timing correlation to file F:\PSV0935A\top_ctd.txt 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Jul 17 01:49:57 2020
+#
+
+
+Top view:               top
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        0
+Constraint File(s):    F:\PSV0935A\top.sdc
+                       
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 992.878
+
+                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group              
+-----------------------------------------------------------------------------------------------------------------------
+top|clk            1.0 MHz       140.4 MHz     1000.000      7.122         992.878     inferred     Inferred_clkgroup_0
+=======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------
+top|clk   top|clk  |  1000.000    992.878  |  No paths    -      |  No paths    -      |  No paths    -    
+===========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report for top 
+
+Mapping to part: xc6slx25csg324-2
+Cell usage:
+DSP48A1         4 uses
+FD              374 uses
+FDE             152 uses
+FDR             110 uses
+FDRE            394 uses
+GND             14 uses
+MUXCY           16 uses
+MUXCY_L         278 uses
+VCC             14 uses
+XORCY           255 uses
+LUT1            186 uses
+LUT2            112 uses
+LUT3            117 uses
+LUT4            150 uses
+LUT5            295 uses
+LUT6            283 uses
+LUT6_2            1 use
+
+I/O ports: 129
+I/O primitives: 129
+IBUF           4 uses
+IBUFG          1 use
+IOBUF          32 uses
+OBUF           92 uses
+
+BUFG           1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   1030 (2%)
+
+DSP48s: 4 of 38 (10%)
+
+Global Clock Buffers: 1 of 16 (6%)
+
+Total load per clock:
+   top|clk: 1034
+
+Mapping Summary:
+Total  LUTs: 1023 (5%)
+
+Distribution of All Consumed LUTs = LUT1 + LUT2 + LUT3 + LUT4 + LUT5 + LUT6 + LUT6_2- HLUTNM/2 
+Distribution of All Consumed Luts 1023 = 186 + 112 + 117 + 150 + 295 + 283 + 1- 242/2 
+
+
+ Number of unique control sets:              39
+
+
+Region Summary:
+Other LUTs: 1144 Other Registers: 1030
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 56MB peak: 167MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:07s cputime
+# Fri Jul 17 01:49:58 2020
+
+###########################################################]

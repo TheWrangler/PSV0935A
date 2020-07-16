@@ -1,0 +1,58 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "01000001111000011110000111100001" on instance ad9914_ctrl_inst_4.lower_limit_reg[31:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.rdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_wdata_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.parallel_wr_inst.p_addr_reg[7:0] 
+@N: FX493 |Applying initial value "00000000" on instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.wdata_reg[7:0] 
+@N: FX493 |Applying initial value "0000" on instance ad9914_update_reg[3:0] 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance finish_reg of view:PrimLib.dffs(prim) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance pre_trig_reg of view:PrimLib.dffr(prim) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[31] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1(verilog) because there are no references to its outputs 
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":219:24:219:58|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_0_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":220:28:220:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_1_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":221:28:221:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_2_'
+@N: MF179 :"f:\psv0935a\ad9914_reg_wr.v":222:28:222:62|Found 8 bit by 8 bit '==' comparator, 'un1_reg_wvar_reg_3_'
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[11] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[1] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s_ad9914_ctrl_inst_1_ad9914_ctrl_inst_2_ad9914_ctrl_inst_3(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[6] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_base_addr_reg[7] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_ctrl.v":145:1:145:6|Removing sequential instance reg_wvar_reg[11] of view:UNILIB.FDRE(PRIM) in hierarchy view:work.ad9914_ctrl_8s(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_1.ad9914_reg_wr_inst.reg_wvar_reg_3_[7] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_2.ad9914_reg_wr_inst.reg_wvar_reg_0_[1] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_3.ad9914_reg_wr_inst.reg_wvar_reg_0_[1] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: BN362 :"f:\psv0935a\ad9914_reg_wr.v":114:4:114:9|Removing sequential instance ad9914_ctrl_inst_4.ad9914_reg_wr_inst.reg_wvar_reg_1_[3] of view:UNILIB.FDCPE(PRIM) in hierarchy view:work.top(verilog) because there are no references to its outputs 
+@N: FX103 :"f:\psv0935a\pwr_rst.v":18:1:18:6|Instance "pwr_rst_inst.rst" with "414" loads has been replicated "4" time(s) due to a soft fanout limit of "100" 
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+@N: FX623 |Packing into LUT62
+@N: MT535 |Writing timing correlation to file F:\PSV0935A\top_ctd.txt 
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.

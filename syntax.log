@@ -1,0 +1,56 @@
+Synopsys Verilog Compiler, version comp201303rc, Build 045R, built Feb 28 2013
+@N|Running in 64-bit mode
+Copyright (C) 1994-2013 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+
+@I::"D:\Synopsys\fpga_H201303\lib\xilinx\unisim_m10i.v"
+@I::"D:\Synopsys\fpga_H201303\lib\xilinx\unisim.v"
+@I::"D:\Synopsys\fpga_H201303\lib\vlog\umr_capim.v"
+@I::"D:\Synopsys\fpga_H201303\lib\vlog\scemi_objects.v"
+@I::"D:\Synopsys\fpga_H201303\lib\vlog\scemi_pipes.svh"
+@I::"D:\Synopsys\fpga_H201303\lib\vlog\hypermods.v"
+@I::"D:\Synopsys\fpga_H201303\bin\..\lib\xilinx\unisim.v"
+@I::"F:\PSV0935A\top.v"
+@W: CG921 :"F:\PSV0935A\top.v":233:15:233:15|i is already declared in this scope.
+@W: CG921 :"F:\PSV0935A\top.v":299:15:299:15|i is already declared in this scope.
+@W: CG921 :"F:\PSV0935A\top.v":366:15:366:15|i is already declared in this scope.
+@W: CG921 :"F:\PSV0935A\top.v":387:12:387:12|i is already declared in this scope.
+@I::"F:\PSV0935A\ad9914_ctrl.v"
+@W: CG424 :"F:\PSV0935A\ad9914_ctrl.v":129:29:129:92|Initial values on multi-dimensional variables not yet implemented.
+@I::"F:\PSV0935A\ad9914_reg_wr.v"
+@I::"F:\PSV0935A\parallel_wr.v"
+@I::"F:\PSV0935A\pwr_rst.v"
+Verilog syntax check successful!
+Selecting top level module top
+@N: CG364 :"F:\PSV0935A\pwr_rst.v":3:7:3:13|Synthesizing module pwr_rst
+
+	MAIN_CLOCK_PERIOD=32'b00000000000000000000000000001000
+	PWR_RST_DELAY=32'b00000101111101011110000100000000
+	PWR_RST_ACTIVE_LEVEL=1'b0
+	DELAY_CLCOK_NUM=32'b00000000101111101011110000100000
+   Generated name = pwr_rst_8s_100000000s_0s_12500000
+
+@N: CG364 :"F:\PSV0935A\parallel_wr.v":21:7:21:17|Synthesizing module parallel_wr
+
+@N: CG364 :"F:\PSV0935A\ad9914_reg_wr.v":21:7:21:19|Synthesizing module ad9914_reg_wr
+
+@W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[0] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[1] is always 0, optimizing ...
+@W: CL279 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Pruning register bits 1 to 0 of reg_base_addr_reg[7:0] 
+
+@N: CG364 :"F:\PSV0935A\ad9914_ctrl.v":23:7:23:17|Synthesizing module ad9914_ctrl
+
+	MASTER_RESET_DELAY_NUM=8'b00001000
+   Generated name = ad9914_ctrl_8s
+
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_0_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_1_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_2_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_3_
+@N: CG364 :"F:\PSV0935A\top.v":21:7:21:9|Synthesizing module top
+
+@E: CG517 :"F:\PSV0935A\top.v":168:12:168:12|For generate statement must be initialized with genvar type.
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Jul 17 01:33:17 2020
+
+###########################################################]

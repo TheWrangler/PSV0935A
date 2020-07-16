@@ -1,0 +1,2 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT529 :"f:\psv0935a\pwr_rst.v":18:1:18:6|Found inferred clock top|clk which controls 1843 sequential elements including pwr_rst_inst.delay_clock_count[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

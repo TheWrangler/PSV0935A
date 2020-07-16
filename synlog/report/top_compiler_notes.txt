@@ -1,0 +1,13 @@
+@N|Running in 64-bit mode
+@N: CG364 :"F:\PSV0935A\pwr_rst.v":3:7:3:13|Synthesizing module pwr_rst
+@N: CG364 :"F:\PSV0935A\parallel_wr.v":21:7:21:17|Synthesizing module parallel_wr
+@N: CG364 :"F:\PSV0935A\ad9914_reg_wr.v":21:7:21:19|Synthesizing module ad9914_reg_wr
+@N: CG364 :"F:\PSV0935A\ad9914_ctrl.v":23:7:23:17|Synthesizing module ad9914_ctrl
+@N: CG364 :"F:\PSV0935A\top.v":21:7:21:9|Synthesizing module top
+@N: CG364 :"D:\Synopsys\fpga_H201303\bin\..\lib\xilinx\unisim.v":13332:7:13332:11|Synthesizing module IOBUF
+@N: CL201 :"F:\PSV0935A\top.v":377:4:377:9|Trying to extract state machine for register fsm_state
+@N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Trying to extract state machine for register fsm_state_cur
+@N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Trying to extract state machine for register initsweep_osk_trig_sta
+@N: CL201 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Trying to extract state machine for register fsm_state_cur
+@N: CL201 :"F:\PSV0935A\parallel_wr.v":80:4:80:9|Trying to extract state machine for register fsm_state_cur
+

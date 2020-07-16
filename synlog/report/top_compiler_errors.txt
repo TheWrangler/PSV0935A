@@ -1,0 +1,2 @@
+@E: CG517 :"F:\PSV0935A\top.v":168:12:168:12|For generate statement must be initialized with genvar type.
+

@@ -1,0 +1,16 @@
+
+. Module name, LUTS, REGISTERS, SYNC RAMS, MULT18x18/MULT18x18S
+. top, 1144, 1030, 0, 4
+.	. ad9914_ctrl_8s, 274, 247, 0, 1
+.	.	. ad9914_reg_wr, 165, 172, 0, 0
+.	.	.	. parallel_wr, 61, 55, 0, 0
+.	. ad9914_ctrl_8s_1, 283, 247, 0, 1
+.	.	. ad9914_reg_wr_1, 170, 172, 0, 0
+.	.	.	. parallel_wr_1, 65, 55, 0, 0
+.	. ad9914_ctrl_8s_2, 271, 251, 0, 1
+.	.	. ad9914_reg_wr_2, 164, 174, 0, 0
+.	.	.	. parallel_wr_2, 63, 55, 0, 0
+.	. ad9914_ctrl_8s_3, 280, 251, 0, 1
+.	.	. ad9914_reg_wr_3, 166, 174, 0, 0
+.	.	.	. parallel_wr_3, 63, 55, 0, 0
+.	. pwr_rst_8s_100000000s_0s_12500000, 36, 29, 0, 0

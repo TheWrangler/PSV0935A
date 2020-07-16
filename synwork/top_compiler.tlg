@@ -1,0 +1,108 @@
+Selecting top level module top
+@N: CG364 :"F:\PSV0935A\pwr_rst.v":3:7:3:13|Synthesizing module pwr_rst
+
+	MAIN_CLOCK_PERIOD=32'b00000000000000000000000000001000
+	PWR_RST_DELAY=32'b00000101111101011110000100000000
+	PWR_RST_ACTIVE_LEVEL=1'b0
+	DELAY_CLCOK_NUM=32'b00000000101111101011110000100000
+   Generated name = pwr_rst_8s_100000000s_0s_12500000
+
+@N: CG364 :"F:\PSV0935A\parallel_wr.v":21:7:21:17|Synthesizing module parallel_wr
+
+@N: CG364 :"F:\PSV0935A\ad9914_reg_wr.v":21:7:21:19|Synthesizing module ad9914_reg_wr
+
+@W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[0] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[1] is always 0, optimizing ...
+@W: CL279 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Pruning register bits 1 to 0 of reg_base_addr_reg[7:0] 
+
+@N: CG364 :"F:\PSV0935A\ad9914_ctrl.v":23:7:23:17|Synthesizing module ad9914_ctrl
+
+	MASTER_RESET_DELAY_NUM=8'b00001000
+   Generated name = ad9914_ctrl_8s
+
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_0_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_1_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_2_
+@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_3_
+@N: CG364 :"F:\PSV0935A\top.v":21:7:21:9|Synthesizing module top
+
+@N: CG364 :"D:\Synopsys\fpga_H201303\bin\..\lib\xilinx\unisim.v":13332:7:13332:11|Synthesizing module IOBUF
+
+@W: CS263 :"F:\PSV0935A\top.v":136:23:136:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":200:23:200:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":263:23:263:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":327:23:327:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@N: CL201 :"F:\PSV0935A\top.v":377:4:377:9|Trying to extract state machine for register fsm_state
+Extracted state machine for register fsm_state
+State machine has 2 reachable states with original encodings of:
+   00000000
+   00000001
+@W: CL249 :"F:\PSV0935A\top.v":377:4:377:9|Initial value is not supported on state machine fsm_state
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[0] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[1] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[3] is always 0, optimizing ...
+@W: CL260 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Pruning register bit 3 of reg_byte_num_reg[3:0] 
+
+@W: CL279 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Pruning register bits 1 to 0 of reg_byte_num_reg[3:0] 
+
+@N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Trying to extract state machine for register fsm_state_cur
+Extracted state machine for register fsm_state_cur
+State machine has 19 reachable states with original encodings of:
+   00000000
+   00000001
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+   00001001
+   00001010
+   00001011
+   00001100
+   00001101
+   00001110
+   00001111
+   00010000
+   00010001
+   00010010
+   00010011
+@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Initial value is not supported on state machine fsm_state_cur
+@N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Trying to extract state machine for register initsweep_osk_trig_sta
+Extracted state machine for register initsweep_osk_trig_sta
+State machine has 5 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Initial value is not supported on state machine initsweep_osk_trig_sta
+@N: CL201 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Trying to extract state machine for register fsm_state_cur
+Extracted state machine for register fsm_state_cur
+State machine has 10 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+   00001001
+@W: CL249 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Initial value is not supported on state machine fsm_state_cur
+@W: CL246 :"F:\PSV0935A\ad9914_reg_wr.v":30:20:30:32|Input port bits 7 to 6 of reg_base_addr[7:0] are unused
+
+@N: CL201 :"F:\PSV0935A\parallel_wr.v":80:4:80:9|Trying to extract state machine for register fsm_state_cur
+Extracted state machine for register fsm_state_cur
+State machine has 9 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+@W: CL249 :"F:\PSV0935A\parallel_wr.v":80:4:80:9|Initial value is not supported on state machine fsm_state_cur

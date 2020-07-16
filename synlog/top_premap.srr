@@ -1,0 +1,49 @@
+Synopsys Xilinx Technology Pre-mapping, Version maprc, Build 1495R, Built Mar  1 2013 13:42:34
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version H-2013.03
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+Reading constraint file: F:\PSV0935A\top.sdc
+@L: F:\PSV0935A\top_scck.rpt 
+Printing clock  summary report in "F:\PSV0935A\top_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+Reading Xilinx I/O pad type table from file <D:\Synopsys\fpga_H201303\lib\xilinx\x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <D:\Synopsys\fpga_H201303\lib\xilinx\gttype.txt> 
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+
+
+Clock Summary
+**************
+
+Start       Requested     Requested     Clock        Clock              
+Clock       Frequency     Period        Type         Group              
+------------------------------------------------------------------------
+top|clk     1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+========================================================================
+
+@W: MT529 :"f:\psv0935a\pwr_rst.v":18:1:18:6|Found inferred clock top|clk which controls 1843 sequential elements including pwr_rst_inst.delay_clock_count[31:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+syn_allowed_resources : blockrams=104  set on top level netlist top
+Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file F:\PSV0935A\top.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 78MB peak: 141MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Jul 17 01:49:49 2020
+
+###########################################################]
