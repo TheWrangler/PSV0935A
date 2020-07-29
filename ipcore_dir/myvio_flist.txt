@@ -1,0 +1,18 @@
+# Output products list for <myvio>
+_xmsgs\pn_parser.xmsgs
+myvio.asy
+myvio.cdc
+myvio.constraints\myvio.ucf
+myvio.constraints\myvio.xdc
+myvio.gise
+myvio.ngc
+myvio.sym
+myvio.ucf
+myvio.v
+myvio.veo
+myvio.xco
+myvio.xdc
+myvio.xise
+myvio_flist.txt
+myvio_readme.txt
+myvio_xmdf.tcl

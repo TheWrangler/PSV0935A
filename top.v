@@ -22,6 +22,12 @@ module top
 (
     input clk,
 
+    input tr_in,
+
+    //uart
+    input uart_rx,
+    output uart_tx,
+
     //ad9914_1
     output osk_1,
     input dover_1,
@@ -52,43 +58,13 @@ module top
     output p_rd_2,
     output p_wr_2,
     output [7 : 0] p_addr_2,
-    inout [7 : 0] p_data_2,
-
-    //ad9914_3
-    output osk_3,
-    input dover_3,
-    output dhold_3,
-    output io_update_3,
-    output master_reset_3,
-    output dctrl_3,
-    output [2 : 0] profile_select_3,
-    output [3 : 0] function_select_3,
-
-    output p_pwd_3,
-    output p_rd_3,
-    output p_wr_3,
-    output [7 : 0] p_addr_3,
-    inout [7 : 0] p_data_3,
-
-    //ad9914_4
-    output osk_4,
-    input dover_4,
-    output dhold_4,
-    output io_update_4,
-    output master_reset_4,
-    output dctrl_4,
-    output [2 : 0] profile_select_4,
-    output [3 : 0] function_select_4,
-
-    output p_pwd_4,
-    output p_rd_4,
-    output p_wr_4,
-    output [7 : 0] p_addr_4,
-    inout [7 : 0] p_data_4
-
+    inout [7 : 0] p_data_2
 );
 
+    localparam ad9914_ref_freq = 3480;//MHz
+
     ////////////////////////global resset//////////////////////////
+    // 产生全局上电复位信号
     wire rst;
     pwr_rst #(
         .MAIN_CLOCK_PERIOD(8),
@@ -100,24 +76,18 @@ module top
         .rst(rst)
     );
 
-    wire [3:0] ad9914_update;
-    wire [3:0] ad9914_busy;
-    reg [3:0] ad9914_update_reg = 4'b0000;
-    assign ad9914_update = ad9914_update_reg;
+    ///////////////////ad9914 1 for sweep//////////////////////////
+    // 扫频DDS
+    wire ad9914_update_1;
+    wire ad9914_update_config_1;
+    wire ad9914_sweep_1;
+    wire ad9914_busy_1;
 
-    wire [31:0] ad9914_ftw_l_1 = 32'd555383702;//450MHz
-    wire [31:0] ad9914_ftw_u_1 = 32'd555383703;//450MHz
+    wire [31:0] ad9914_ftw_l_1;
+    wire [31:0] ad9914_ftw_u_1;
+    wire [31:0] ad9914_step_1;
+    wire [15:0] ad9914_rate_1;
 
-    wire [31:0] ad9914_ftw_l_2 = 32'd1110767404;//900MHz
-    wire [31:0] ad9914_ftw_u_2 = 32'd1110767405;//900MHz
-
-    wire [31:0] ad9914_ftw_l_3 = 32'd1234186004;//1000MHz
-    wire [31:0] ad9914_ftw_u_3 = 32'd1234186005;//1000MHz
-
-    wire [31:0] ad9914_ftw_l_4 = 32'd839246483;//680MHz
-    wire [31:0] ad9914_ftw_u_4 = 32'd839246484;//680MHz
-
-    ///////////////////ad9914 1//////////////////////////
     wire ad9914_p_data_tri_select_1;
     wire [7:0] ad9914_p_data_in_1;
     wire [7:0] ad9914_p_data_out_1;
@@ -129,21 +99,20 @@ module top
         .clk(clk),
         .rst(rst),
 
-        .update(ad9914_update[0]),
+        .update(ad9914_update_1),
+        .update_config(ad9914_update_config_1),
+        .sweep(ad9914_sweep_1),
+        .sweep_edge(1),
         .lower_limit(ad9914_ftw_l_1),
         .upper_limit(ad9914_ftw_u_1),
-        .positive_step(0),
-        .positive_rate(145),
-        .resweep_period(0),
+        .positive_step(ad9914_step_1),
+        .negitive_step(0),
+        .positive_rate(1),
+        .negitive_rate(1),
 
-        .busy(ad9914_busy[0]),
+        .busy(ad9914_busy_1),
         .finish(),
 
-        .trig(),
-        .pre_trig(),
-        .resweep(),
-
-        .osk(osk_1),
         .dover(dover_1),
         .dhold(dhold_1),
         .io_update(io_update_1),
@@ -166,10 +135,10 @@ module top
         for(i=0;i<8;i=i+1) begin : ad9914_ctrl_inst_1_p_data_tri
             IOBUF
             #(
-                .DRIVE(12), // Specify the output drive strength
-                .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE"
-                .IOSTANDARD("DEFAULT"), // Specify the I/O standard
-                .SLEW("SLOW") // Specify the output slew rate
+                .DRIVE(12),
+                .IBUF_LOW_PWR("TRUE"),
+                .IOSTANDARD("DEFAULT"),
+                .SLEW("SLOW")
             )
             IOBUF_inst
             (
@@ -181,7 +150,17 @@ module top
         end
     endgenerate
 
-    ///////////////////ad9914 2//////////////////////////
+    ///////////////////ad9914 2 for freq hoop//////////////////////////
+    // 跳频DDS
+    wire ad9914_update_2;
+    wire ad9914_sweep_2;
+    wire ad9914_busy_2;
+
+    wire [31:0] ad9914_ftw_l_2;
+    wire [31:0] ad9914_ftw_u_2;
+    wire [31:0] ad9914_step_2;
+    wire [15:0] ad9914_rate_2;
+
     wire ad9914_p_data_tri_select_2;
     wire [7:0] ad9914_p_data_in_2;
     wire [7:0] ad9914_p_data_out_2;
@@ -193,21 +172,21 @@ module top
         .clk(clk),
         .rst(rst),
 
-        .update(ad9914_update[1]),
+        .update(ad9914_update_2),
+        .update_config(0),
+        .sweep(ad9914_sweep_2),
+        .sweep_edge(1),
         .lower_limit(ad9914_ftw_l_2),
         .upper_limit(ad9914_ftw_u_2),
         .positive_step(0),
-        .positive_rate(145),
-        .resweep_period(0),
+        .negitive_step(0),
+        .positive_rate(1),
+        .negitive_rate(1),
+        
 
-        .busy(ad9914_busy[1]),
+        .busy(ad9914_busy_2),
         .finish(),
 
-        .trig(),
-        .pre_trig(),
-        .resweep(),
-
-        .osk(osk_2),
         .dover(dover_2),
         .dhold(dhold_2),
         .io_update(io_update_2),
@@ -229,10 +208,10 @@ module top
         for(i=0;i<8;i=i+1) begin : ad9914_ctrl_inst_2_p_data_tri
             IOBUF
             #(
-                .DRIVE(12), // Specify the output drive strength
-                .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE"
-                .IOSTANDARD("DEFAULT"), // Specify the I/O standard
-                .SLEW("SLOW") // Specify the output slew rate
+                .DRIVE(12),
+                .IBUF_LOW_PWR("TRUE"),
+                .IOSTANDARD("DEFAULT"),
+                .SLEW("SLOW")
             )
             IOBUF_inst
             (
@@ -244,154 +223,234 @@ module top
         end
     endgenerate
 
-    ///////////////////ad9914 3//////////////////////////
-    wire ad9914_p_data_tri_select_3;
-    wire [7:0] ad9914_p_data_in_3;
-    wire [7:0] ad9914_p_data_out_3;
 
-    ad9914_ctrl #(
-        .MASTER_RESET_DELAY_NUM(8)
+    ///////////////Calc Sweep params for ad9914_1/////////////////////////
+    // // 计算扫频AD9914的扫频参数 430~470MHz
+    SweepParamCalc #(
+        .AD9914_REF_FREQ(ad9914_ref_freq),//MHz
+        .SWEEP_STEP_NUM(10)
     )
-    ad9914_ctrl_inst_3 (
+    SweepParamCalc_inst_1(
+        .freq_l(32'd430),//MHz
+        .freq_u(32'd470),//MHz
+        //.freq_step(32'd100),//KHz
+        .sweep_span(0),//ns
+        .ftw_l(ad9914_ftw_l_1),
+        .ftw_u(ad9914_ftw_u_1),
+        .positive_step(),
+        .positive_rate()
+    );
+
+    // ///////////////Calc Sweep params for ad9914_2/////////////////////////
+    // // 计算跳频AD9914的跳频参数
+    SweepParamCalc #(
+        .AD9914_REF_FREQ(ad9914_ref_freq),//MHz
+        .SWEEP_STEP_NUM(10)
+    )
+    SweepParamCalc_inst_2(
+        .freq_l(32'd900),//MHz
+        .freq_u(32'd900),//MHz
+        //.freq_step(32'd100),//KHz
+        .sweep_span(0),//ns
+        .ftw_l(ad9914_ftw_l_2),
+        .ftw_u(ad9914_ftw_u_2),
+        .positive_step(),
+        .positive_rate()
+    );
+
+    ///////////////////////////generate filtered tr//////////////////////
+    // 对外部tr信号进行滤波
+    wire tr;
+    wire [1:0] tr_edge;
+    tr_filter tr_filter_inst
+    (
+        .clk(clk),
+        .rst(rst),
+        .tr_in(tr_in),
+        
+        .tr(tr),
+        .tr_edge(tr_edge)
+    );
+
+    ///////////////////////////generate pre tr///////////////////////////
+    // // 对tr信号做超前处理，超前时间与AD9914配置速率所需时间相关
+    wire pre_tr;
+    wire [1:0] pre_tr_edge;
+    pre_tr_gen #(
+        .TR_PERIOD_CLOCK_NUM(15000),//120*125us
+        .TR_POSITIVE_PERIOD_CLOCK_NUM(20),//20*1us
+        .PRE_TR_CLOCK_NUM(46)
+    )
+    pre_tr_gen_inst (
         .clk(clk),
         .rst(rst),
 
-        .update(ad9914_update[2]),
-        .lower_limit(ad9914_ftw_l_3),
-        .upper_limit(ad9914_ftw_u_3),
-        .positive_step(0),
-        .positive_rate(145),
-        .resweep_period(0),
-
-        .busy(ad9914_busy[2]),
-        .finish(),
-
-        .trig(),
-        .pre_trig(),
-        .resweep(),
-
-        .osk(osk_3),
-        .dover(dover_3),
-        .dhold(dhold_3),
-        .io_update(io_update_3),
-        .master_reset(master_reset_3),
-        .dctrl(dctrl_3),
-        .profile_select(profile_select_3),
-        .function_select(function_select_3),
-
-        .p_pwd(p_pwd_3),
-        .p_rd(p_rd_3),
-        .p_wr(p_wr_3),
-        .p_addr(p_addr_3),
-        .p_data_in(ad9914_p_data_in_3),
-        .p_data_out(ad9914_p_data_out_3),
-        .p_data_tri_select(ad9914_p_data_tri_select_3)
+        .tr(tr),
+        .tr_edge(tr_edge),
+        .pre_tr(pre_tr),
+        .pre_tr_edge(pre_tr_edge)
     );
 
-    generate
-        for(i=0;i<8;i=i+1) begin : ad9914_ctrl_inst_3_p_data_tri
-            IOBUF
-            #(
-                .DRIVE(12), // Specify the output drive strength
-                .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE"
-                .IOSTANDARD("DEFAULT"), // Specify the I/O standard
-                .SLEW("SLOW") // Specify the output slew rate
-            )
-            IOBUF_inst
-            (
-                .I(ad9914_p_data_out_3[i]),
-                .O(ad9914_p_data_in_3[i]),
-                .T(ad9914_p_data_tri_select_3),
-                .IO(p_data_3[i])
-            );
-        end
-    endgenerate
 
-
-    ///////////////////ad9914 4//////////////////////////
-    wire ad9914_p_data_tri_select_4;
-    wire [7:0] ad9914_p_data_in_4;
-    wire [7:0] ad9914_p_data_out_4;
-
-    ad9914_ctrl #(
-        .MASTER_RESET_DELAY_NUM(8)
+    ///////////////////////////generate prf//////////////////////////////
+    // 产生prf时许，用于osk
+    wire prf;
+    wire [1:0] prf_edge;
+    prf_gen #(
+        .RF_DELAY_CLOCK_NUM( 120 ),
+        .PRF_PHASE_DELAY_0_CLOCK_NUM(600),
+        .PRF_PHASE_DELAY_1_CLOCK_NUM(840),
+        .PRF_PHASE_DELAY_2_CLOCK_NUM(1560),
+        .PRF_PHASE_0_CLOCK_NUM(12),
+        .PRF_PHASE_1_CLOCK_NUM(60),
+        .PRF_PHASE_2_CLOCK_NUM(240),
+        .PRF_PHASE_3_CLOCK_NUM(600)
     )
-    ad9914_ctrl_inst_4 (
+    prf_gen_inst (
+        .clk(clk),
+        .rst(rst),
+        .tr(tr),
+        .tr_edge(tr_edge),
+        .prf(prf),
+        .prf_edge(prf_edge)
+    );
+
+    ///////////////////////////generate pre_prf//////////////////////////////
+    //产生超前prf信号，用于在每个脉冲前启动扫频
+    wire pre_prf;
+    wire [1:0] pre_prf_edge;
+    prf_gen #(
+        .RF_DELAY_CLOCK_NUM( 120 ),
+        .PRF_PHASE_DELAY_0_CLOCK_NUM(600),
+        .PRF_PHASE_DELAY_1_CLOCK_NUM(840),
+        .PRF_PHASE_DELAY_2_CLOCK_NUM(1560),
+        .PRF_PHASE_0_CLOCK_NUM(12),
+        .PRF_PHASE_1_CLOCK_NUM(60),
+        .PRF_PHASE_2_CLOCK_NUM(240),
+        .PRF_PHASE_3_CLOCK_NUM(600)
+    )
+    pre_prf_gen_inst (
+        .clk(clk),
+        .rst(rst),
+        .tr(pre_tr),
+        .tr_edge(pre_tr_edge),
+        .prf(pre_prf),
+        .prf_edge(pre_prf_edge)
+    );
+
+    ///////////////////////////generate pre_prf//////////////////////////////
+    //产生滞后prf信号，用于在每个脉冲前配置扫频参数
+    wire post_prf;
+    wire [1:0] post_prf_edge;
+    prf_gen #(
+        .RF_DELAY_CLOCK_NUM( 240 ),
+        .PRF_PHASE_DELAY_0_CLOCK_NUM(600),
+        .PRF_PHASE_DELAY_1_CLOCK_NUM(840),
+        .PRF_PHASE_DELAY_2_CLOCK_NUM(1560),
+        .PRF_PHASE_0_CLOCK_NUM(12),
+        .PRF_PHASE_1_CLOCK_NUM(60),
+        .PRF_PHASE_2_CLOCK_NUM(240),
+        .PRF_PHASE_3_CLOCK_NUM(600)
+    )
+    post_prf_gen_inst (
+        .clk(clk),
+        .rst(rst),
+        .tr(tr),
+        .tr_edge(tr_edge),
+        .prf(post_prf),
+        .prf_edge(post_prf_edge)
+    );
+
+    /////////////////////////////////////////////////////////////////////
+    protocol #(
+        .MAIN_CLK_FREQ(120000000),// 时钟clk频率
+        .UART_BAUD(115200) //串口波特率
+    )
+    protocol_inst (
         .clk(clk),
         .rst(rst),
 
-        .update(ad9914_update[3]),
-        .lower_limit(ad9914_ftw_l_4),
-        .upper_limit(ad9914_ftw_u_4),
-        .positive_step(0),
-        .positive_rate(145),
-        .resweep_period(0),
+        //uart
+        .uart_rx(uart_rx),
+        .uart_tx(uart_tx),
 
-        .busy(ad9914_busy[3]),
-        .finish(),
+        //数据帧输出
+        .cmd_out_en(),
+        .cmd(),
+        .cmd_ready(),
 
-        .trig(),
-        .pre_trig(),
-        .resweep(),
-
-        .osk(osk_4),
-        .dover(dover_4),
-        .dhold(dhold_4),
-        .io_update(io_update_4),
-        .master_reset(master_reset_4),
-        .dctrl(dctrl_4),
-        .profile_select(profile_select_4),
-        .function_select(function_select_4),
-
-        .p_pwd(p_pwd_4),
-        .p_rd(p_rd_4),
-        .p_wr(p_wr_4),
-        .p_addr(p_addr_4),
-        .p_data_in(ad9914_p_data_in_4),
-        .p_data_out(ad9914_p_data_out_4),
-        .p_data_tri_select(ad9914_p_data_tri_select_4)
+        .crc_err()
     );
 
-    generate
-        for(i=0;i<8;i=i+1) begin : ad9914_ctrl_inst_4_p_data_tri
-            IOBUF
-            #(
-                .DRIVE(12), // Specify the output drive strength
-                .IBUF_LOW_PWR("TRUE"),  // Low Power - "TRUE", High Performance = "FALSE"
-                .IOSTANDARD("DEFAULT"), // Specify the I/O standard
-                .SLEW("SLOW") // Specify the output slew rate
-            )
-            IOBUF_inst
-            (
-                .I(ad9914_p_data_out_4[i]),
-                .O(ad9914_p_data_in_4[i]),
-                .T(ad9914_p_data_tri_select_4),
-                .IO(p_data_4[i])
-            );
-        end
-    endgenerate
+    ////////////////////////////////////////////////////////////////////
+    // 控制DDS
+    wire debug_update_start;
+    workflow workflow_inst
+    (
+        .clk(clk),
+        .rst(rst),
+        .update_enable(debug_update_start),
 
-    //////////////////////////work flow//////////////////////////////////
-    reg [7:0] fsm_state = 8'd0;
-    integer j;
-    always @ (posedge clk) begin
-        if(!rst) begin
-            ad9914_update_reg <= 4'b0000;
-            fsm_state <= 8'd0;
-        end 
-        else begin
-            case(fsm_state)
-                0 : begin
-                    ad9914_update_reg <= 4'b1111;
-                    fsm_state <= 8'd1;
-                end
-                1 : begin
-                    for(j=0;j<4;j++)
-                        ad9914_update_reg[j] <= (ad9914_update_reg[j] ? ad9914_update_reg[j] ^ ad9914_busy[j] : 0);
-                    fsm_state <= 8'd1;
-                end
-            endcase
-        end
-    end
+        .tr_edge(tr_edge),
+        .prf_edge(prf_edge),
+        .pre_prf_edge(pre_prf_edge),
+        .post_prf_edge(post_prf_edge),
+
+        .ad9914_update_1(ad9914_update_1),
+        .ad9914_update_config_1(ad9914_update_config_1),
+        .ad9914_sweep_1(ad9914_sweep_1),
+        .ad9914_busy_1(ad9914_busy_1),
+        .ad9914_sweep_step_1(ad9914_step_1),
+
+        .ad9914_update_2(ad9914_update_2),
+        .ad9914_sweep_2(ad9914_sweep_2),
+        .ad9914_busy_2(ad9914_busy_2)
+    );
+
+    wire [35:0] CONTROL0;
+    wire [35:0] CONTROL1;
+	wire [109:0] TRIG0;
+    wire [7:0] ASYNC_OUT;
+    wire [7:0] ASYNC_IN;
+	assign TRIG0[0] = tr_in;
+	assign TRIG0[1] = prf;
+	assign TRIG0[2] = ad9914_update_1;
+    assign TRIG0[3] = ad9914_sweep_1;
+	assign TRIG0[35:4] = ad9914_ftw_l_1;
+    assign TRIG0[67:36] = ad9914_step_1;
+    assign TRIG0[75:68] = p_addr_1;
+    assign TRIG0[83:76] = ad9914_p_data_out_1;
+    assign TRIG0[99:84] = ad9914_rate_1;
+    assign TRIG0[100] = dctrl_1;
+    assign TRIG0[101] = io_update_1;
+    assign TRIG0[102] = ad9914_busy_1;
+    assign TRIG0[103] = ad9914_update_config_1;
+    assign TRIG0[104] = pre_prf;
+    assign TRIG0[105] = pre_tr;
+    assign TRIG0[106] = dover_1;
+    assign TRIG0[107] = debug_update_start;
+    assign TRIG0[108] = post_prf;
+
+    assign debug_update_start = ASYNC_OUT[0];
+	
+	myila myila_inst (
+		.CONTROL(CONTROL0),
+		.CLK(clk),
+		.TRIG0(TRIG0)
+	);
+
+	myicon myicon_inst (
+    	.CONTROL0(CONTROL0),
+        .CONTROL1(CONTROL1)
+	);
+
+    myvio myvio_inst (
+        .CONTROL(CONTROL1),
+        .ASYNC_IN(ASYNC_IN), 
+        .ASYNC_OUT(ASYNC_OUT) 
+    );
+
+    assign osk_1 = prf;
+    assign osk_2 = 1;
 
 endmodule

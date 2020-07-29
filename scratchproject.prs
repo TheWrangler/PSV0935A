@@ -4,9 +4,27 @@
 
 #project files
 add_file -verilog "D:/Synopsys/fpga_H201303/bin/../lib/xilinx/unisim.v"
+add_file -xilinx "F:/PSV0935A/ipcore_dir/myicon.ngc"
+add_file -xilinx "F:/PSV0935A/ipcore_dir/myila.ngc"
+add_file -xilinx "F:/PSV0935A/ipcore_dir/myfifo.ngc"
+add_file -xilinx "F:/PSV0935A/ipcore_dir/myvio.ngc"
+add_file -verilog "F:/PSV0935A/uart_tx.v"
+add_file -verilog "F:/PSV0935A/uart_rx.v"
 add_file -verilog "F:/PSV0935A/parallel_wr.v"
+add_file -verilog "F:/PSV0935A/ipcore_dir/myfifo.v"
+add_file -verilog "F:/PSV0935A/cmd_tx.v"
+add_file -verilog "F:/PSV0935A/cmd_rx.v"
 add_file -verilog "F:/PSV0935A/ad9914_reg_wr.v"
+add_file -verilog "F:/PSV0935A/workflow.v"
+add_file -verilog "F:/PSV0935A/tr_filter.v"
+add_file -verilog "F:/PSV0935A/SweepParamCalc.v"
 add_file -verilog "F:/PSV0935A/pwr_rst.v"
+add_file -verilog "F:/PSV0935A/protocol.v"
+add_file -verilog "F:/PSV0935A/prf_gen.v"
+add_file -verilog "F:/PSV0935A/pre_tr_gen.v"
+add_file -verilog "F:/PSV0935A/ipcore_dir/myvio.v"
+add_file -verilog "F:/PSV0935A/ipcore_dir/myila.v"
+add_file -verilog "F:/PSV0935A/ipcore_dir/myicon.v"
 add_file -verilog "F:/PSV0935A/ad9914_ctrl.v"
 add_file -verilog "F:/PSV0935A/top.v"
 add_file -constraint "F:/PSV0935A/top.sdc"
@@ -34,7 +52,7 @@ set_option -use_fsm_explorer 0
 set_option -top_module "top"
 
 # mapper_options
-set_option -frequency 1
+set_option -frequency 0.0
 set_option -write_verilog 0
 set_option -write_vhdl 0
 set_option -srs_instrumentation 1

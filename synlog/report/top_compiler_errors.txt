@@ -1,2 +1,2 @@
-@E: CG517 :"F:\PSV0935A\top.v":168:12:168:12|For generate statement must be initialized with genvar type.
+@E: CG906 :"F:\PSV0935A\ad9914_ctrl.v":328:39:328:50|Reference to unknown variable positive_reg.
 

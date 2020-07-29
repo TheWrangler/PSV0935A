@@ -1,23 +1,117 @@
-@W: CG424 :"F:\PSV0935A\ad9914_ctrl.v":129:29:129:92|Initial values on multi-dimensional variables not yet implemented.
+@W: CG289 :"F:\PSV0935A\ad9914_ctrl.v":132:25:132:47|Specified digits overflow the number's size
+@W: CG289 :"F:\PSV0935A\ad9914_ctrl.v":132:25:132:47|Specified digits overflow the number's size
 @W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[0] is always 0, optimizing ...
 @W: CL189 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Register bit reg_base_addr_reg[1] is always 0, optimizing ...
 @W: CL279 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Pruning register bits 1 to 0 of reg_base_addr_reg[7:0] 
-@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_0_
-@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_1_
-@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_2_
-@W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_3_
-@W: CS263 :"F:\PSV0935A\top.v":136:23:136:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":200:23:200:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":263:23:263:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":327:23:327:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CL249 :"F:\PSV0935A\top.v":377:4:377:9|Initial value is not supported on state machine fsm_state
-@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[0] is always 0, optimizing ...
-@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[1] is always 0, optimizing ...
-@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[3] is always 0, optimizing ...
-@W: CL260 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Pruning register bit 3 of reg_byte_num_reg[3:0] 
-@W: CL279 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Pruning register bits 1 to 0 of reg_byte_num_reg[3:0] 
-@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Initial value is not supported on state machine fsm_state_cur
-@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Initial value is not supported on state machine initsweep_osk_trig_sta
+@W: CL169 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Pruning register delay_count[31:0] 
+@W: CG146 :"F:\PSV0935A\ipcore_dir\myfifo.v":39:7:39:12|Creating black box for empty module myfifo
+@W: CG360 :"F:\PSV0935A\cmd_rx.v":35:11:35:17|No assignment to wire data_en
+@W: CG360 :"F:\PSV0935A\cmd_tx.v":35:17:35:20|No assignment to wire data
+@W: CG360 :"F:\PSV0935A\cmd_tx.v":41:9:41:20|No assignment to wire uart_tx_load
+@W: CG360 :"F:\PSV0935A\protocol.v":42:9:42:23|No assignment to wire cmd_dout_dready
+@W: CG360 :"F:\PSV0935A\protocol.v":66:9:66:18|No assignment to wire cmd_din_en
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register cmd_dout_en_reg 
+@W: CG133 :"F:\PSV0935A\workflow.v":43:15:43:29|No assignment to ad9914_update_2
+@W: CG133 :"F:\PSV0935A\workflow.v":44:15:44:28|No assignment to ad9914_sweep_2
+@W: CS263 :"F:\PSV0935A\top.v":105:20:105:20|Port-width mismatch for port sweep_edge. Formal has width 1, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":110:23:110:23|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":111:23:111:23|Port-width mismatch for port negitive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":176:23:176:23|Port-width mismatch for port update_config. Formal has width 1, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":178:20:178:20|Port-width mismatch for port sweep_edge. Formal has width 1, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":183:23:183:23|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":184:23:184:23|Port-width mismatch for port negitive_rate. Formal has width 16, Actual 32
+@W: CG781 :"F:\PSV0935A\top.v":378:19:378:19|Undriven input cmd_out_en on instance protocol_inst, tying to 0
+@W: CG360 :"F:\PSV0935A\top.v":89:16:89:28|No assignment to wire ad9914_rate_1
+@W: CG360 :"F:\PSV0935A\top.v":161:16:161:28|No assignment to wire ad9914_step_2
+@W: CG360 :"F:\PSV0935A\top.v":162:16:162:28|No assignment to wire ad9914_rate_2
+@W: CG360 :"F:\PSV0935A\top.v":414:15:414:22|No assignment to wire ASYNC_IN
+@W: CL156 :"F:\PSV0935A\top.v":412:14:412:18|*Input TRIG0[109:0] to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL156 :"F:\PSV0935A\top.v":414:15:414:22|*Input ASYNC_IN[7:0] to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[0] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[1] is always 1, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[5] is always 1, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[6] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[7] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[9] is always 1, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[10] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[12] is always 1, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[13] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[16] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[17] is always 1, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[19] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[20] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[22] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[23] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[24] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[25] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[26] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[27] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[28] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[29] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[30] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\workflow.v":121:4:121:9|Register bit ad9914_sweep_step_1[31] is always 0, optimizing ...
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 31 to 22 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 20 to 19 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 17 to 16 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 13 to 12 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 10 to 9 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 7 to 5 of ad9914_sweep_step_1[31:0] 
+@W: CL279 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bits 1 to 0 of ad9914_sweep_step_1[31:0] 
+@W: CL249 :"F:\PSV0935A\workflow.v":121:4:121:9|Initial value is not supported on state machine config_fsm_state
+@W: CL249 :"F:\PSV0935A\workflow.v":51:4:51:9|Initial value is not supported on state machine update_fsm_state
+@W: CL249 :"F:\PSV0935A\workflow.v":83:4:83:9|Initial value is not supported on state machine sweep_fsm_state
+@W: CL260 :"F:\PSV0935A\workflow.v":121:4:121:9|Pruning register bit 15 of ad9914_sweep_step_1[15:14] 
+@W: CL159 :"F:\PSV0935A\workflow.v":32:16:32:23|Input prf_edge is unused
+@W: CL159 :"F:\PSV0935A\workflow.v":45:10:45:22|Input ad9914_busy_2 is unused
+@W: CL249 :"F:\PSV0935A\protocol.v":90:4:90:9|Initial value is not supported on state machine sta_cur
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit cmd_ready to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit crc_err to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[0] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[1] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[2] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[3] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[4] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[5] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[6] to a constant 0
+@W: CL190 :"F:\PSV0935A\protocol.v":90:4:90:9|Optimizing register bit acc_res[7] to a constant 0
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register acc_res[7:0] 
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register byte_index[5:0] 
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register cmd_ready 
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register crc_err 
+@W: CL169 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register cmd 
+@W: CL279 :"F:\PSV0935A\protocol.v":90:4:90:9|Pruning register bits 63 to 1 of cmd[63:0] 
+@W: CL156 :"F:\PSV0935A\protocol.v":66:9:66:18|*Input cmd_din_en to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL159 :"F:\PSV0935A\protocol.v":35:10:35:19|Input cmd_out_en is unused
+@W: CL156 :"F:\PSV0935A\cmd_tx.v":41:9:41:20|*Input uart_tx_load to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL156 :"F:\PSV0935A\cmd_tx.v":35:17:35:20|*Input data[7:0] to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL156 :"F:\PSV0935A\cmd_tx.v":41:9:41:20|*Input uart_tx_load to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL157 :"F:\PSV0935A\cmd_tx.v":35:17:35:20|*Output data has undriven bits -- simulation mismatch possible.
+@W: CL189 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Register bit r_Clock_Count[11] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Register bit r_Clock_Count[12] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Register bit r_Clock_Count[13] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Register bit r_Clock_Count[14] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Register bit r_Clock_Count[15] is always 0, optimizing ...
+@W: CL279 :"F:\PSV0935A\uart_tx.v":37:2:37:7|Pruning register bits 15 to 11 of r_Clock_Count[15:0] 
+@W: CL156 :"F:\PSV0935A\cmd_rx.v":35:11:35:17|*Input data_en to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.
+@W: CL157 :"F:\PSV0935A\cmd_rx.v":35:11:35:17|*Output data_en has undriven bits -- simulation mismatch possible.
+@W: CL249 :"F:\PSV0935A\prf_gen.v":45:4:45:9|Initial value is not supported on state machine fsm_state
+@W: CL159 :"F:\PSV0935A\prf_gen.v":36:10:36:11|Input tr is unused
+@W: CL249 :"F:\PSV0935A\prf_gen.v":45:4:45:9|Initial value is not supported on state machine fsm_state
+@W: CL159 :"F:\PSV0935A\prf_gen.v":36:10:36:11|Input tr is unused
+@W: CL249 :"F:\PSV0935A\pre_tr_gen.v":41:4:41:9|Initial value is not supported on state machine fsm_state
+@W: CL159 :"F:\PSV0935A\pre_tr_gen.v":31:10:31:11|Input tr is unused
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_byte_num_reg[0] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_byte_num_reg[1] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_byte_num_reg[3] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_base_addr_reg[4] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_base_addr_reg[5] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_base_addr_reg[6] is always 0, optimizing ...
+@W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Register bit reg_base_addr_reg[7] is always 0, optimizing ...
+@W: CL279 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Pruning register bits 7 to 4 of reg_base_addr_reg[7:0] 
+@W: CL260 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Pruning register bit 3 of reg_byte_num_reg[3:0] 
+@W: CL279 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Pruning register bits 1 to 0 of reg_byte_num_reg[3:0] 
+@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":138:1:138:6|Initial value is not supported on state machine fsm_state_cur
+@W: CL159 :"F:\PSV0935A\ad9914_ctrl.v":45:7:45:11|Input dover is unused
 @W: CL249 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Initial value is not supported on state machine fsm_state_cur
 @W: CL246 :"F:\PSV0935A\ad9914_reg_wr.v":30:20:30:32|Input port bits 7 to 6 of reg_base_addr[7:0] are unused
 @W: CL249 :"F:\PSV0935A\parallel_wr.v":80:4:80:9|Initial value is not supported on state machine fsm_state_cur

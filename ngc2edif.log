@@ -1,0 +1,17 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design F:/PSV0935A/ipcore_dir/myila.ngc ...
+WARNING:NetListWriters:298 - No output is written to myila..xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block myila is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block myila is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file syntmp/myila..ndf ...
+ngc2edif: Total memory usage is 4326432 kilobytes
+

@@ -24,20 +24,37 @@ Selecting top level module top
 @W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_1_
 @W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_2_
 @W: CG133 :"F:\PSV0935A\ad9914_ctrl.v":129:14:129:16|No assignment to sfr_3_
+@W: CL169 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Pruning register delay_count[31:0] 
+
+@N: CG364 :"F:\PSV0935A\prf_gen.v":21:7:21:13|Synthesizing module prf_gen
+
 @N: CG364 :"F:\PSV0935A\top.v":21:7:21:9|Synthesizing module top
 
 @N: CG364 :"D:\Synopsys\fpga_H201303\bin\..\lib\xilinx\unisim.v":13332:7:13332:11|Synthesizing module IOBUF
 
-@W: CS263 :"F:\PSV0935A\top.v":136:23:136:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":200:23:200:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":263:23:263:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@W: CS263 :"F:\PSV0935A\top.v":327:23:327:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
-@N: CL201 :"F:\PSV0935A\top.v":377:4:377:9|Trying to extract state machine for register fsm_state
+@W: CS263 :"F:\PSV0935A\top.v":105:23:105:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@W: CS263 :"F:\PSV0935A\top.v":169:23:169:25|Port-width mismatch for port positive_rate. Formal has width 16, Actual 32
+@N: CL201 :"F:\PSV0935A\top.v":240:4:240:9|Trying to extract state machine for register fsm_state
 Extracted state machine for register fsm_state
 State machine has 2 reachable states with original encodings of:
    00000000
    00000001
-@W: CL249 :"F:\PSV0935A\top.v":377:4:377:9|Initial value is not supported on state machine fsm_state
+@W: CL249 :"F:\PSV0935A\top.v":240:4:240:9|Initial value is not supported on state machine fsm_state
+@N: CL135 :"F:\PSV0935A\prf_gen.v":34:4:34:9|Found seqShift tr_track2, depth=3, width=1
+@N: CL201 :"F:\PSV0935A\prf_gen.v":68:4:68:9|Trying to extract state machine for register fsm_state
+Extracted state machine for register fsm_state
+State machine has 10 reachable states with original encodings of:
+   00000000
+   00000001
+   00000010
+   00000011
+   00000100
+   00000101
+   00000110
+   00000111
+   00001000
+   00001001
+@W: CL249 :"F:\PSV0935A\prf_gen.v":68:4:68:9|Initial value is not supported on state machine fsm_state
 @W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[0] is always 0, optimizing ...
 @W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[1] is always 0, optimizing ...
 @W: CL189 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Register bit reg_byte_num_reg[3] is always 0, optimizing ...
@@ -47,7 +64,7 @@ State machine has 2 reachable states with original encodings of:
 
 @N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Trying to extract state machine for register fsm_state_cur
 Extracted state machine for register fsm_state_cur
-State machine has 19 reachable states with original encodings of:
+State machine has 18 reachable states with original encodings of:
    00000000
    00000001
    00000011
@@ -66,17 +83,8 @@ State machine has 19 reachable states with original encodings of:
    00010000
    00010001
    00010010
-   00010011
 @W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":145:1:145:6|Initial value is not supported on state machine fsm_state_cur
-@N: CL201 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Trying to extract state machine for register initsweep_osk_trig_sta
-Extracted state machine for register initsweep_osk_trig_sta
-State machine has 5 reachable states with original encodings of:
-   0000
-   0001
-   0010
-   0011
-   0100
-@W: CL249 :"F:\PSV0935A\ad9914_ctrl.v":359:1:359:6|Initial value is not supported on state machine initsweep_osk_trig_sta
+@W: CL159 :"F:\PSV0935A\ad9914_ctrl.v":46:7:46:11|Input dover is unused
 @N: CL201 :"F:\PSV0935A\ad9914_reg_wr.v":114:4:114:9|Trying to extract state machine for register fsm_state_cur
 Extracted state machine for register fsm_state_cur
 State machine has 10 reachable states with original encodings of:

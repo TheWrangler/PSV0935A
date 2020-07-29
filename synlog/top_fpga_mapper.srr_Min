@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Jul 17 01:49:58 2020
+# Timing Report written on Thu Jul 30 00:53:16 2020
 #
 
 
@@ -21,25 +21,35 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 0.599
+Worst slack in design: -1.452
 
-                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
-Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group              
------------------------------------------------------------------------------------------------------------------------
-top|clk            1.0 MHz       140.4 MHz     1000.000      7.122         992.878     inferred     Inferred_clkgroup_0
-=======================================================================================================================
+                                                                 Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                                                   Frequency     Frequency     Period        Period        Slack       Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock     1.0 MHz       105.1 MHz     1000.000      9.511         990.490     inferred     Inferred_clkgroup_0
+myicon|U0/iUPDATE_OUT_inferred_clock                             1.0 MHz       733.6 MHz     1000.000      1.363         998.637     inferred     Inferred_clkgroup_2
+top|clk                                                          1.0 MHz       126.6 MHz     1000.000      7.900         992.100     inferred     Inferred_clkgroup_1
+System                                                           1.0 MHz       1.0 MHz       1000.000      1001.453      -1.452      system       system_clkgroup    
+=====================================================================================================================================================================
 
 
 
 Clock Relationships
 *******************
 
-Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
----------------------------------------------------------------------------------------------------------
-Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
----------------------------------------------------------------------------------------------------------
-top|clk   top|clk  |  0.000       0.599  |  No paths    -      |  No paths    -      |  No paths    -    
-=========================================================================================================
+Clocks                                                                                                                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                      Ending                                                        |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                        myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  |  0.000       -1.453  |  No paths    -      |  No paths    -      |  0.000       -0.402
+myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  System                                                        |  0.000       2.398   |  No paths    -      |  No paths    -      |  No paths    -     
+myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  |  0.000       0.305   |  No paths    -      |  No paths    -      |  No paths    -     
+myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  top|clk                                                       |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -     
+top|clk                                                       myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -     
+top|clk                                                       top|clk                                                       |  0.000       0.288   |  No paths    -      |  No paths    -      |  No paths    -     
+myicon|U0/iUPDATE_OUT_inferred_clock                          myicon|U0/U_ICON/I_YES_BSCAN_U_BS/iDRCK_LOCAL_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -     
+myicon|U0/iUPDATE_OUT_inferred_clock                          myicon|U0/iUPDATE_OUT_inferred_clock                          |  0.000       0.839   |  No paths    -      |  No paths    -      |  No paths    -     
+====================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 

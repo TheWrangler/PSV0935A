@@ -29,20 +29,19 @@ module ad9914_ctrl
 	input rst,
 
 	input update,
+	input update_config,
+	input sweep,
+	input sweep_edge,//1-positive sweep,0-negitive sweep
 	input [31 : 0] lower_limit,
 	input [31 : 0] upper_limit,
 	input [31 : 0] positive_step,
+	input [31 : 0] negitive_step, 
 	input [15 : 0] positive_rate,
-	input [31 : 0] resweep_period,
+	input [15 : 0] negitive_rate,
 
 	output busy,
 	output finish,
 
-	output trig,
-	output pre_trig,
-	output resweep,
-
-	output osk,
 	input dover,
 	output dhold,
 	output io_update,
@@ -112,35 +111,29 @@ module ad9914_ctrl
 	reg dctrl_reg = 0;
 	assign dctrl = dctrl_reg;
 
-	reg pre_trig_reg = 0;
-	assign pre_trig = pre_trig_reg;
-
 	reg master_reset_reg = 0;
 	assign master_reset = master_reset_reg;
-
-	reg resweep_state = 0;
-	assign resweep = resweep_state;
 	
 	reg busy_reg = 0;
 	reg finish_reg = 1;
 	assign busy = busy_reg;
 	assign finish = finish_reg;
 
-	reg [31 : 0] sfr [3 : 0] = {32'h00_05_31_20,32'h00_00_19_1c,32'h00_04_29_00,32'h00_01_03_00};
+	//reg [31 : 0] sfr [3 : 0] = {32'h00_05_31_20,32'h00_00_19_1c,32'h00_04_29_00,32'h00_01_03_00};
+	reg [31:0] sfr0 = 32'h00_01_03_00;
+	reg [31:0] sfr1 = 32'h00_04_29_00;
+	reg [31:0] sfr2 = 32'h00_00_19_1c;
+	reg [31:0] sfr3 = 32'h00_05_31_20;
 
 	reg [31 : 0] lower_limit_reg = 32'd1105322465;//1000MHz+/-125MHz,step=10KHz
 	reg [31 : 0] upper_limit_reg = 32'd1421128884;
 	reg [31 : 0] positive_step_reg = 32'd12632;
-	reg [15 : 0] positive_rate_reg = 32'h0001_0001;//count with sysclk/24
+	reg [31 : 0] negitive_step_reg = 32'd12632; 
+	reg [31 : 0] rate_reg = 32'h0001_0001_0001_0001;//count with sysclk/24
+	reg sweep_edge_reg = 1'b1;
 
-	reg [31 : 0] resweep_period_reg = 32'h0000_0000;
-	
 	reg [7 : 0] fsm_state_cur = 0;
 	reg [31 : 0] delay_count = 0;
-	reg [7 : 0] reg_index = 0;
-
-	reg fixed_freq_enable = 0;
-	reg osk_trig_enable = 0;
 	
 	always @ (posedge clk) begin
 		if(!rst) begin
@@ -152,14 +145,7 @@ module ad9914_ctrl
 			reg_wvar_reg <= 0;
 			reg_byte_num_reg <= 0;	
 
-			reg_index <= 0;	
-
 			dctrl_reg <= 0;
-			pre_trig_reg <= 0;
-
-			fixed_freq_enable <= 0;
-			osk_trig_enable <= 0;
-			resweep_state <= 0;
 
 			fsm_state_cur <= 0;
 		end
@@ -167,152 +153,156 @@ module ad9914_ctrl
 			//lock parameter and reset
 			0 : begin
 				dctrl_reg <= 0;
-				pre_trig_reg <= 0;
-				osk_trig_enable <= 0;
-				resweep_state <= 0;
-				reg_index <= 0;
-
 				fsm_state_cur <= 1;
 			end
 			1 : begin
 				if(update) begin
 					lower_limit_reg <= lower_limit;
 					upper_limit_reg <= upper_limit;
-					positive_step_reg <= positive_step;
-					positive_rate_reg <= positive_rate;
-					resweep_period_reg <= resweep_period;
-
+					rate_reg <= {negitive_rate,positive_rate};
 					busy_reg <= 1;
 					finish_reg <= 0;
-
-					fixed_freq_enable <= (positive_step == 0) ? 1 : 0;
-					
-					fsm_state_cur <= 3;
+					fsm_state_cur <= 2;
+				end
+				else if(update_config) begin
+					positive_step_reg <= positive_step;
+					negitive_step_reg <= negitive_step;
+					sweep_edge_reg <= sweep_edge;
+					busy_reg <= 1;
+					finish_reg <= 0;
+					fsm_state_cur <= 19;
+				end
+				else if(sweep) begin
+					busy_reg <= 1;
+					finish_reg <= 0;
+					fsm_state_cur <= 24;
 				end
 			end
 
-			//write sfr
-			3 : begin 
+			//write sfr0
+			2 : begin 
 				if(p_finish) begin
-					reg_wvar_reg <= sfr[reg_index];
-					reg_base_addr_reg <= reg_index;
+					reg_wvar_reg <= sfr0;
+					reg_base_addr_reg <= 8'h00;
 					reg_byte_num_reg <= 4;
 					p_load_reg <= 1;
-					fsm_state_cur <= 4;
+					fsm_state_cur <= 3;
 				end	
 			end
-			4 : begin
+			3 : begin
 				if(p_busy) begin
 					p_load_reg <= 0;
-					reg_index <= reg_index + 1;
-					if(reg_index == 3)
-						fsm_state_cur <= 5;
-					else fsm_state_cur <= 3;	
+					fsm_state_cur <= 4;	
+				end
+			end
+
+			//write sfr1
+			4 : begin 
+				if(p_finish) begin
+					reg_wvar_reg <= sfr1;
+					reg_base_addr_reg <= 8'h01;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 5;
+				end	
+			end
+			5 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 6;	
+				end
+			end
+
+			//write sfr2
+			6 : begin 
+				if(p_finish) begin
+					reg_wvar_reg <= sfr2;
+					reg_base_addr_reg <= 8'h02;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 7;
+				end	
+			end
+			7 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 8;	
+				end
+			end
+
+			//write sfr3
+			8 : begin 
+				if(p_finish) begin
+					reg_wvar_reg <= sfr3;
+					reg_base_addr_reg <= 8'h03;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 9;
+				end	
+			end
+			9 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 10;	
 				end
 			end
 			
 			//lower_limit
-			5 : begin 
+			10 : begin 
 				if(p_finish) begin
 					reg_wvar_reg <= lower_limit_reg;
-					reg_base_addr_reg <= reg_index;
+					reg_base_addr_reg <= 8'h04;
 					reg_byte_num_reg <= 4;
 					p_load_reg <= 1;
-					fsm_state_cur <= 6;
+					fsm_state_cur <= 11;
 				end
 			end
-			6 : begin
+			11 : begin
 				if(p_busy) begin
 					p_load_reg <= 0;
-					reg_index <= reg_index + 1;
-					fsm_state_cur <= 7;
+					fsm_state_cur <= 12;
 				end
 			end
 			
 			//upper_limit
-			7 : begin 
+			12 : begin 
 				if(p_finish) begin
 					reg_wvar_reg <= upper_limit_reg;
-					reg_base_addr_reg <= reg_index;
+					reg_base_addr_reg <= 8'h05;
 					reg_byte_num_reg <= 4;
 					p_load_reg <= 1;
-					fsm_state_cur <= 8;
-				end
-			end
-			8 : begin
-				if(p_busy) begin
-					p_load_reg <= 0;
-					reg_index <= reg_index + 1;
-					fsm_state_cur <= 9;
-				end
-			end
-			
-			//positive_step
-			9 : begin 
-				if(p_finish) begin
-					reg_wvar_reg <= positive_step_reg;
-					reg_base_addr_reg <= reg_index;
-					reg_byte_num_reg <= 4;
-					p_load_reg <= 1;
-					fsm_state_cur <= 10;
-				end
-			end
-			10 : begin
-				if(p_busy) begin
-					p_load_reg <= 0;
-					reg_index <= reg_index + 2;
-					fsm_state_cur <= 11;
-				end
-			end
-			
-			//positive rate
-			11 : begin 
-				if(p_finish) begin
-					reg_wvar_reg <= positive_rate_reg;
-					reg_base_addr_reg <= reg_index;
-					reg_byte_num_reg <= 4;
-					p_load_reg <= 1;
-					fsm_state_cur <= 12;
-				end
-			end
-			12 : begin
-				if(p_busy) begin
-					p_load_reg <= 0;
 					fsm_state_cur <= 13;
 				end
 			end
-
-			//ps:Amplitude Scale Factor 0
-			13 : begin 
-				if(p_finish) begin
-					reg_wvar_reg <= 32'h0f_ff_00_00;
-					reg_base_addr_reg <= 8'h0c;
-					reg_byte_num_reg <= 4;
-					p_load_reg <= 1;
+			13 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
 					fsm_state_cur <= 14;
 				end
 			end
-			14 : begin
-				if(p_busy) begin
-					p_load_reg <= 0;
+
+			//sweep rate
+			14 : begin 
+				if(p_finish) begin
+					reg_wvar_reg <= rate_reg;
+					reg_base_addr_reg <= 8'h08;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
 					fsm_state_cur <= 15;
 				end
 			end
-
 			15 : begin
-				if(p_finish && (!p_res)) begin
-					osk_trig_enable <= 1;
+				if(p_busy) begin
+					p_load_reg <= 0;
 					fsm_state_cur <= 16;
 				end
 			end
-
-			//enable sweep
-			16 : begin
-				pre_trig_reg <= 0; 
+			
+			//ps:Amplitude Scale Factor 0
+			16 : begin 
 				if(p_finish) begin
-					dctrl_reg <= 1;
-					reg_wvar_reg <= sfr[1] | 32'h00_08_00_00;
-					reg_base_addr_reg <= 8'h01;
+					reg_wvar_reg <= 32'h0f_ff_00_00;
+					reg_base_addr_reg <= 8'h0c;
 					reg_byte_num_reg <= 4;
 					p_load_reg <= 1;
 					fsm_state_cur <= 17;
@@ -325,80 +315,80 @@ module ad9914_ctrl
 				end
 			end
 			18 : begin
-				if(p_finish) begin
+				if(p_finish && (!p_res)) begin
 					busy_reg <= 0;
 					finish_reg <= 1;
-					dctrl_reg <= 0;
-					delay_count <= 0;
-					fsm_state_cur <= 19;
+					fsm_state_cur <= 1;
 				end
 			end
+
+			//sweep step
 			19 : begin
-				delay_count <= delay_count + 1;
-				if(update)
-					fsm_state_cur <= 0;
-				else if((delay_count > resweep_period_reg) && (!fixed_freq_enable)) begin
-					resweep_state <= 1;
-					fsm_state_cur <= 16;
+				if(p_finish) begin
+					reg_wvar_reg <= sfr1 & 32'hff_f7_ff_ff;
+					reg_base_addr_reg <= 8'h01;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 20;
 				end
-				else if(delay_count > resweep_period_reg - 32'd40)
-					pre_trig_reg <= 1;
+			end
+			20 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 21;
+				end
+			end
+			21 : begin 
+				if(p_finish) begin
+					reg_wvar_reg <= (sweep_edge_reg ? positive_step_reg : negitive_step_reg);
+					reg_base_addr_reg <= (sweep_edge_reg ? 8'h06 : 8'h07);
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 22;
+				end
+			end
+			22 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 23;
+				end
+			end
+			23 : begin
+				if(p_finish && (!p_res)) begin
+					busy_reg <= 0;
+					finish_reg <= 1;
+					fsm_state_cur <= 1;
+				end
+			end
+
+			//enable sweep
+			24 : begin
+				if(p_finish) begin
+					dctrl_reg <= (sweep_edge_reg ? 1 : 0);
+					reg_wvar_reg <= sfr1 | 32'h00_08_00_00;
+					reg_base_addr_reg <= 8'h01;
+					reg_byte_num_reg <= 4;
+					p_load_reg <= 1;
+					fsm_state_cur <= 25;
+				end
+			end
+			25 : begin
+				if(p_busy) begin
+					p_load_reg <= 0;
+					fsm_state_cur <= 26;
+				end
+			end
+			26 : begin
+				if(p_finish && (!p_res)) begin
+					busy_reg <= 0;
+					finish_reg <= 1;
+					//dctrl_reg <= (sweep_edge_reg ? 0 : 1);
+					delay_count <= 0;
+					fsm_state_cur <= 1;
+				end
 			end
 		endcase
 	end
-
-	//resweep trig & osk
-	wire resweep_osk_trig;
-	assign resweep_osk_trig = resweep_state ? ~dover : 0;
-
-	//first sweep trig & osk
-	wire initsweep_osk_trig;
-	reg initsweep_osk_trig_enable = 0;
-	reg [7:0] initsweep_osk_trig_delay_count = 0;
-	reg [3:0] initsweep_osk_trig_sta = 0;
-	always @ (posedge clk) begin
-		if(!rst) begin
-			initsweep_osk_trig_delay_count <= 0;
-			initsweep_osk_trig_enable <= 0;
-			initsweep_osk_trig_sta <= 0;
-		end
-		case (initsweep_osk_trig_sta)
-			0 : begin
-				if(update) begin
-					initsweep_osk_trig_enable <= 0;
-					initsweep_osk_trig_delay_count <= 0;
-					initsweep_osk_trig_sta <= 1;
-				end
-			end
-			1 : begin
-				initsweep_osk_trig_delay_count <= initsweep_osk_trig_delay_count + 1;
-				if(initsweep_osk_trig_delay_count == 5) begin
-					initsweep_osk_trig_sta <= 2;	
-				end
-			end
-			2 : begin
-				if(osk_trig_enable)
-					initsweep_osk_trig_sta <= 3;
-			end
-			3 : begin
-				if(io_update) begin
-					initsweep_osk_trig_delay_count <= 0;
-					initsweep_osk_trig_sta <= 4;
-				end
-			end
-			4 : begin
-				initsweep_osk_trig_delay_count <= initsweep_osk_trig_delay_count + 1;
-				if(initsweep_osk_trig_delay_count == 5) begin
-					initsweep_osk_trig_enable <= 1;
-					initsweep_osk_trig_sta <= 0;	
-				end
-			end
-		endcase
-	end
-	assign initsweep_osk_trig = initsweep_osk_trig_enable ? ~dover : 0;
-
-	assign osk = (resweep_state ? resweep_osk_trig : initsweep_osk_trig) | fixed_freq_enable;
-	assign trig = osk;
 
 	// wire [35:0] CONTROL0;
 	// wire [99:0] TRIG0;
